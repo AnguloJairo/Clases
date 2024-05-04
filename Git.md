@@ -41,3 +41,4 @@ Git es una herramienta de control de versiones distribuido, lo que significa que
 - **Comunicación**: Los cambios se comparten a través del repositorio remoto y se pueden revisar con `git pull`.
 - **Resolución de Conflictos**: Si hay conflictos entre los cambios de diferentes colaboradores, se resuelven manualmente antes de fusionar las ramas.
 - **Subir Cambios**: Los cambios se suben al repositorio remoto con `git push`, lo que permite que otros colaboradores vean y revisen los cambios.
+## hola soy jairo
