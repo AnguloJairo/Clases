@@ -1,7 +1,7 @@
 public class Cajero {
     private String user;
     private String clave;
-
+    
     public String getUser() {
         return user;
     }
