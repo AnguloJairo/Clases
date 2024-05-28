@@ -10,9 +10,9 @@ public class Persona {
     }
     
     public Persona(String nombre, String apellido, String cedula) {
-        setNombre(nombre);
-        setApellido(apellido);
-        setCedula(cedula);
+        // setNombre(nombre);
+        // setApellido(apellido);
+        // setCedula(cedula);
     }
 
     public String getNombre() {

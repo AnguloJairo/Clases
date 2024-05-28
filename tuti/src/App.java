@@ -1,6 +1,17 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        Persona pr = new Persona();
+
+        // if(args.length == 0) {
+        //     System.out.println("detecto que eres un intruso");
+        //     System.exit(0);
+        // }
+
+        // String usuario=args[0];
+        // if(usuario.equals("angul"))
+        //     System.out.println("hola papi");
+
+        Persona pr;
+        pr = new Persona();
         Persona pr2 = new Persona(null, null, "123456789");
 
         pr.setNombre("Jairo");
@@ -16,8 +27,8 @@ public class App {
         System.out.println(pr2.getCedula());
 
 
-        Cajero ocj = new Cajero();
-        Supervisor osp = new Supervisor();
+        // Cajero ocj = new Cajero();
+        // Supervisor osp = new Supervisor();
         
     }
 }
