@@ -9,9 +9,25 @@ public class Jugador {
         setUsuario("AngJai");
     }
 
-    public boolean login(String usuario, String clave){
+    public boolean login(){
+        String nombre="";
+        String usuario="";
+        boolean registro=true;
+        do{
+            
+        System.out.println("ingresa el usuario");
+        usuario = App.sc.nextLine();
+        System.out.println("ingresa el nombre");
+        nombre = App.sc.nextLine();
+        
         if(this.usuario.equalsIgnoreCase(usuario) == this.clave.equalsIgnoreCase(clave))
             return true;
+
+            System.out.println("presiona s para salir");
+            if(App.sc.nextLine().toUpperCase().equals("S"))
+                return false;
+
+        }while(registro);
         return false;
 
     }

@@ -14,7 +14,13 @@ public class Juego {
         this.rio = "~".repeat(15);
     }
 
-    public short mostrarMenu(){
+    public boolean jugarLobito(){
+        while(mostrarMenu());
+        return true;
+
+    }
+
+    public boolean mostrarMenu(){
         int opc=-1;
         System.out.println("       "+barca+rio);
         System.out.println("0. Vikingo va solo");
@@ -34,12 +40,31 @@ public class Juego {
             }catch(Exception e){
                 App.sc.next();
             }
-        }while(opc<=0 || opc>=4);
-        return (short) opc;
+        }while(opc<0 || opc>=4);
+        String individuo ="";
+            individuo = (vikingoEstaIzq)? ladoIzq [opc]:ladoDer [opc];
+        moverBarca(individuo);
+        vikingoEstaIzq = !vikingoEstaIzq;
+        return true;
 
-        
     }
 
+    public void moverBarca(String individuo){
+        if(vikingoEstaIzq){
+            for(int i=0; i<rio.length(); i++)
+                getRioBarca(i, individuo);
+        }else{
+            for(int i=rio.length(); i>0; i--)
+                getRioBarca(i, individuo);
+        }
+    }
+    public void getRioBarca(int posicion, String individuo){
+        String rioBarca="\r"+"~".repeat(posicion) + barca.replace("?", individuo) +"~".repeat(rio.length()-posicion) ;
+                System.out.print(rioBarca);
+                try {
+                    Thread.sleep(100);
+              
+                } catch (InterruptedException e) {}
 
-
+    }
 }
