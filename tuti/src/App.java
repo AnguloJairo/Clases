@@ -25,6 +25,8 @@ public class App {
         System.out.println(pr2.getNombre());
         System.out.println(pr2.getApellido());
         System.out.println(pr2.getCedula());
+        System.out.println(pr2.getCedula());
+        
 
 
         // Cajero ocj = new Cajero();
